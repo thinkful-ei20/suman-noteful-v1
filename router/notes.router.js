@@ -10,7 +10,7 @@ const notes = simDB.initialize(data); // <<== and this
 
 
 // Get All (and search by query)
-router.get('/api/notes', (req, res, next) => {
+router.get('/notes', (req, res, next) => {
   const {searchTerm} = req.query;
 
   notes.filter(searchTerm,(err,list) => {
@@ -21,7 +21,7 @@ router.get('/api/notes', (req, res, next) => {
   });
 });
 
-router.get('/api/notes/:id', (req, res,next) => {
+router.get('/notes/:id', (req, res,next) => {
   const id = req.params.id;
   notes.find(id,(err,item)=>{
     if(err){
@@ -31,7 +31,7 @@ router.get('/api/notes/:id', (req, res,next) => {
   });
 });
 
-router.put('/api/notes/:id',(req,res,next)=>{  
+router.put('/notes/:id',(req,res,next)=>{  
   const id = req.params.id;  
   const updateObj ={};
   const updateFields = ['title','content'];

@@ -16,7 +16,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.json());
 app.use(morgan('common'));
-app.use(notesRouter);
+app.use('/api', notesRouter);
 
 
 //ERROR HANDLING 

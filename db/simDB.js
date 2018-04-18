@@ -86,7 +86,7 @@ const simDB = {
 
   delete: function (id, callback) {
     setTimeout(() => {
-      try {
+      try {        
         id = Number(id);
         const index = this.data.findIndex(item => item.id === id);
         if (index === -1) {

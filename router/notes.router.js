@@ -80,12 +80,12 @@ router.post('/notes', (req, res, next) => {
 
 //DELETE an item
 router.delete('/notes/:id', (req,res,next) => {
-  const id = req.params.id;
-  notes.delete(id,(err)=>{
-    if(err){      
+  const id = req.params.id; 
+  notes.delete(id,(err, newlength)=>{
+    if(err){    
       return next(err);
     }
-    else{   
+    else{               
       res.sendStatus(204);         
     }
   });

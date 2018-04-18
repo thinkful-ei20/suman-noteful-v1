@@ -5,10 +5,7 @@ const morgan = require('morgan');
 const {PORT} = require('./config');
 const notesRouter = require('./router/notes.router');
 
-// Simple In-Memory Database
-// const data = require('./db/notes');
-// const simDB = require('./db/simDB');  // <<== add this
-// const notes = simDB.initialize(data); // <<== and this
+
 
 // Create an Express application
 const app = express();

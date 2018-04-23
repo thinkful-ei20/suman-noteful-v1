@@ -50,6 +50,13 @@ const noteful = (function () {
     });
   }
 
+
+  let obj = {
+    then : function(){
+      
+    }
+  }
+
   function handleNoteSearchSubmit() {
     $('.js-notes-search-form').on('submit', event => {
       event.preventDefault();

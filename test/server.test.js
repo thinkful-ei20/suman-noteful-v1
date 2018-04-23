@@ -121,5 +121,5 @@ it('should update notes on PUT',function(){
       expect(res).to.have.status(200);      
       expect(res.body).to.be.a('object');      
     });    
-});
+});  
 
